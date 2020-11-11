@@ -8,8 +8,8 @@ El servidor fue desarrollado utilizando NodeeJS)(Javascript) , con librerias y f
 Para poder realizar la instalacion correcta de las dependencias  solo basta con aplicar el comando
 
 > npm install --save
-> //Para inicializar el servidor
-> node start.js
+> node start.js //Para inicializar el servidor
+
 
 
 
