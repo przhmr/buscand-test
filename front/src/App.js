@@ -50,7 +50,7 @@ console.log(err)
   };
 
   return (
-<div className="w-full  h-screen bg-gray-800">
+<div className="w-full  h-screen p-2 bg-gray-800">
 
 
 <div className="">
@@ -77,11 +77,11 @@ console.log(err)
   
   {searchData && (
     
-<ul className="mt-10 mx-3  text-white">{searchData.map((item) => (
+<ul className="mt-10  text-white">{searchData.map((item) => (
 <>
 
 
-        <li className="item p-2"> Show: {item.show.name} Score: {item.score} from TVMAZE </li>
+        <li className="item p-2 mx-24  my-2 rounded-full opacity-85   bg-red-300"> Show: {item.show.name} Score: {item.score} from TVMAZE </li>
         
     </>
     
