@@ -62,9 +62,9 @@ console.log(err)
   <form onSubmit={submit} className="justify-center items-center flex flex-col" >
     
       
-      <input type="search" name="q" className=" rounded-full m-4" placeholder="Busqueda..." autocomplete="off" onChange={handleChange}></input>
+      <input type="search" name="q" className=" py-2 px-6 rounded-full m-4" placeholder="Busqueda..." autocomplete="off" onChange={handleChange}></input>
       
-        <button className=" rounded-full  bg-red-300" type="submit">
+        <button className=" py-2 px-6 text-white rounded-full  bg-red-300 " type="submit">
           Buscar
         </button>
         
@@ -77,11 +77,11 @@ console.log(err)
   
   {searchData && (
     
-<ul className="mt-10 text-white">{searchData.map((item) => (
+<ul className="mt-10 mx-3  text-white">{searchData.map((item) => (
 <>
 
 
-        <li className="item"> Show: {item.show.name} Score: {item.score} from TVMAZE </li>
+        <li className="item p-2"> Show: {item.show.name} Score: {item.score} from TVMAZE </li>
         
     </>
     
