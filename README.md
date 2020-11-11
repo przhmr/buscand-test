@@ -10,9 +10,6 @@ Para poder realizar la instalacion correcta de las dependencias  solo basta con 
 > npm install --save
 > node start.js //Para inicializar el servidor
 
-
-
-
   Configuracion y uso de la API:
   El endpoint configurado para realizar la busqueda de las multiples api es 
   
