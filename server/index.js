@@ -45,15 +45,18 @@ try{
 
 console.log("Paso 2")
 
-res.send(await itunesAPI(req.body.searchField))
+
 
 let data= await tvMazeAPI(req.body.searchField)
 let data1= await itunesAPI(req.body.searchField)
 
-console.log(await itunesAPI(req.body.searchField))
+res.send({
+  data,
+  data1
+})
 
 console.log(data.length + " results from tvMazeAPI")
-console.log(data1.resultCount + " results from itunesAPI")
+
 
 console.log("Paso 3")
 }
