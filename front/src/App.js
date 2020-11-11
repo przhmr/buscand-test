@@ -6,7 +6,7 @@ function App() {
 
   const [searchField, setSearchField]= useState();
   const [error, setError]= useState();
-  const [searchData, setSearchData]= useState();
+  const [searchData, setSearchData]= useState([]);
  
   useEffect(() => {
        if (searchData){
@@ -62,7 +62,7 @@ console.log(err)
   <form onSubmit={submit} className="justify-center items-center flex flex-col" >
     
       
-      <input type="search" name="q" className=" py-2 px-6 rounded-full m-4" placeholder="Busqueda..." autocomplete="off" onChange={handleChange}></input>
+      <input type="search" name="q" className=" py-2 px-6 rounded-full m-4" placeholder="Busqueda..."  onChange={handleChange}></input>
       
         <button className=" py-2 px-6 text-white rounded-full  bg-red-300 " type="submit">
           Buscar
@@ -75,20 +75,20 @@ console.log(err)
   
 
   
-  {searchData && (
+  {searchData.length >0 ? (
     
 <ul className="mt-10  text-white">{searchData.map((item) => (
 <>
 
 
-        <li className="item p-2 mx-24  my-2 rounded-full opacity-85   bg-red-300"> Show: {item.show.name} Score: {item.score} from TVMAZE </li>
+        <li className="item p-2 mx-24  my-2 rounded-full opacity-85 border-solid border-2  border-red-300"> Show: {item.show.name} Score: {item.score} from TVMAZE </li>
         
     </>
     
     
       ))} </ul>
     
-    )} 
+    ): <div className="text-white"> La busqueda no arrojo resultados </div>} 
 
 
 
